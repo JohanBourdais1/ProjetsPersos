@@ -1,0 +1,666 @@
+html, body {
+	background-color: RGB(255,255,255);
+	padding: 0px;
+	margin: 0px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/* ----------------- input text management ----------------- */
+input[type=text]{
+	border-radius: 4px;
+	border: 1px solid #DDD;
+	color: #555;
+	padding: 4px 5px;
+	min-height: 18px;
+	line-height: 18px;
+	box-shadow: inset 1px 1px 4px #DDD;
+	background-color: #EEE;
+}
+
+/*------------------ description text management ------------ */
+#descriptionText{
+	margin-left: 360px;
+}
+.descriptionTextTitle{
+	color: #006400;
+	font-weight: bold;
+	font-size: 20px;
+}
+.descriptionTextSectionTitle{
+	color: #009B3e;
+	font-weight: bold;
+}
+.descriptionTextSectionContent{
+	margin-left: 20px;
+}
+#TM172PImage{
+	float: left;
+	margin-left: 0px
+}
+
+
+/* ----------------- select menu management ----------------- */
+.custom-select{
+	border-radius: 4px;
+	border: 1px solid #DDD;
+	padding: 4px 5px;
+	min-height: 18px;
+	line-height: 18px;
+	box-shadow: inset 1px 1px 4px #DDD;
+	background-color: #EEE;
+	width: 150px;
+	overflow: hidden;
+	color: #555;
+
+}
+.custom-select select {
+   background: transparent;
+   border: none;
+   width: 150px;
+   color: #fff;
+}
+.custom-select select:hover {
+   cursor: pointer;
+   color: #fff;
+}
+.custom-select select:disabled {
+   cursor: pointer;
+   color: #555;
+}
+.custom-select:hover {
+   background: linear-gradient(#505559,#717679),#505559;
+   color: #fff;
+}
+.custom-select:hover select{
+   color: #fff;
+   background: linear-gradient(#505559,#717679),#505559;
+}
+/* ----------------- button management ----------------- */
+.custom-button{
+	border-radius: 4px;
+	border: 1px solid #DDD;
+	background: #e6e6e6 url('bt.png') 50% 50% repeat-x;
+	padding: 4px 5px;
+	min-height: 18px;
+	line-height: 18px;
+	box-shadow: inset 1px 1px 4px #DDD;
+	width: 80px;
+  	color: #555;
+}
+.custom-button:hover {
+   cursor: pointer;
+   color: #fff;
+   background: linear-gradient(#505559,#717679),#505559;
+}
+.custom-button:active {
+   cursor: pointer;
+   color: #fff;
+   background: linear-gradient(#505559,#717679),#505559;
+   transform: translateY(4px);
+}
+
+#autoRefresh{
+	width: 160px;
+}
+
+/* ----------------- input radio management ----------------- */
+.custom-radio {
+    display: block;
+    position: relative;
+    margin-bottom: 2px;
+    font-size: 16px;
+}
+.custom-radio input {
+	background: transparent;
+}
+.custom-radio label {
+	position: absolute;
+	left: 2px;
+	cursor: pointer;
+}
+.checkmark2 {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    height: 15px;
+    width: 15px;
+    background: #e6e6e6 url('bt.png') 50% 50% repeat-x;
+    border-radius: 50%;
+    border: 1px solid #DDD;
+}
+.custom-radio:hover input ~ .checkmark2 {
+    background: linear-gradient(#505559,#717679),#505559;
+}
+.custom-radio input:checked ~ .checkmark2 {
+    background: linear-gradient(#505559,#717679),#505559;
+}
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.custom-radio input:checked ~ .checkmark2:after {
+    display: block;
+}
+.custom-radio .checkmark2:after {
+ 	top: 5px;
+	left: 5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* ----------------- modified input text management when value is on/off ----------------- */
+.displayValueON{
+	position: relative;
+	border-radius: 4px;
+	border: 1px solid #DDD;
+	color: #555;
+	padding: 6px 67px 6px 5px;
+	min-height: 18px;
+	line-height: 18px;
+	box-shadow: inset 1px 1px 4px #DDD;
+	background-color: #EEE;
+	font-weight: 400;
+  	font-size: 0.8em;
+}
+
+.displayValueOFF{
+	position: relative;
+	border-radius: 4px;
+	border: 1px solid #DDD;
+	color: #555;
+	padding: 6px 60px 6px 5px;
+	min-height: 18px;
+	line-height: 18px;
+	box-shadow: inset 1px 1px 4px #DDD;
+	background-color: #EEE;
+	font-weight: 400;
+  	font-size: 0.8em;
+}
+
+/* ----------------- general design elements ----------------- */
+#header-parent{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 2;
+	background-color: white;
+}
+
+#header {
+    position: relative;
+    height: 65px;
+    background-color: #fff;
+}
+
+#logo{
+	float: left;
+}
+
+.pagebody {
+	position: relative;
+	top: 190px;
+	width: 80%;
+	margin-left: 225px;
+	padding-left: 20px;
+	padding-right: 20px;
+	z-index: 1;
+}
+
+#mainTitle{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 40px;
+	font-size: 18pt;
+	color: #241F0C;
+}
+
+#subMainTitle{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 12pt;
+	color: #241F0C;
+}
+
+.title {
+	top: 100px;
+	margin-left: 225px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #4BB850;
+	font-size: 180%;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+
+hr{
+	top: 105px;
+    margin-top: 0;
+    margin-left: 225px;
+    border: 0;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #fff;
+}
+
+/* ----------------- cursor management ----------------- */
+.accessSubMenu {
+	float: right;
+}
+
+.accessSubMenu:hover{
+	cursor: pointer;
+}
+
+.accessLocalValue:hover{
+	cursor: pointer;
+}
+/* ----------------- table management ----------------- */
+.table {
+	width: 98.5%;
+	font: 16px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 80;
+	margin-bottom: 30px;
+	margin-left: 20px;
+	border-collapse: collapse;
+}
+
+.table th.topMenu{
+	font-size: 20px;
+	color: #006400;
+}
+
+.table th {
+	color: #009B3e;
+	text-align: left;
+	vertical-align: baseline;
+}
+
+.table tr {
+	height: 40px;
+}
+
+.table td {
+	border-bottom: 2px solid #eee;
+	background-color: white;
+	padding: 5px;
+}
+
+.table tr:hover > td{
+	background-color: #eee;
+}
+/* ----------------- section management ----------------- */
+.section {
+	padding: 15px;
+	margin: .5em .3em .5em 0;
+	margin-right: 20px;
+	background: #FFF;
+	border: 2px solid #A0A0A0;
+	-webkit-box-shadow: 2px 2px 3px #AAA;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.sectiontitle {
+	position: relative;
+	font: 22px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #333;
+	margin: 0 .3em .3em;
+	padding-top: 10px;
+	padding-left: .2em;
+	background: #FFF;
+	font-weight: 700;
+}
+.sectiontitle hr {
+	margin-left: 0px;
+	margin-top: 2px;
+}
+
+#alertForceAI{
+	position: absolute;
+	vertical-align: baseline;
+	margin-left: 10px;
+}
+#alertForceAO{
+	position: absolute;
+	vertical-align: baseline;
+	margin-left: 10px;
+}
+#alertForceDI{
+	position: absolute;
+	vertical-align: baseline;
+	margin-left: 10px;
+}
+#alertForceDO{
+	position: absolute;
+	vertical-align: baseline;
+	margin-left: 10px;
+}
+
+/*------------------ logo schneider electric ----------------------*/
+#imgLogo {
+	position: fixed;
+	top: 0px; 
+	right: 0px;
+	z-index: 2;
+}
+
+/* ----------------- tab menu management ----------------- */
+ul.menu {
+	margin: 0px;
+	background: linear-gradient(to bottom, #08742c 0%,#009B3E 100%);
+	border-bottom: 1px solid RGB(0,149,48);
+	padding-left: 10px;
+	padding-top: 7px;
+	height: 33px;
+}
+
+li.tabmenu {
+	float: left;
+	display: block;
+	position: relative;
+
+}
+
+li.tabmenu > a {
+	display: block;
+	width: 160px;
+	height: 25px;
+	font: 16px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: RGB(255,255,255);
+	padding-left: 15px;
+	padding-top: 5px;
+	margin-right: 5px;
+	margin-top: 4px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	text-decoration: none;
+}
+
+li.tabmenu > a[href="#"] {
+	cursor: pointer;
+}
+
+li.tabmenu_on > a {
+	color: #009B3E;
+	background-color: #FFF;
+}
+
+li.tabmenu_off > a {
+	background-color: #4BB850;
+	color: #FFFFFF;
+}
+
+li.tabmenu_off:hover > a { 
+	background-color: #FFFFFF;
+	color: #009B3E; 
+}
+
+li.tabmenu_off > ul{
+	display: none;
+}
+
+/* ----------------- sub menu management ----------------- */
+/*---- side menu for tabmenu_on ----*/
+.showSubMenu{
+	position: fixed;
+	top: 140px;
+	left: 0px;
+	padding-right: 10px;
+	padding-left: 5px;
+	background-color: #EAEAEA;
+	border-radius: 0px 5px 5px 0px;
+	font-weight: bold;
+	color: #555;
+	vertical-align: middle;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+.showSubMenu:hover{
+	cursor: pointer;
+	background: linear-gradient(#505559,#717679),#505559;
+	color: white;
+}
+
+li.tabmenu_on > ul.sub-menu{
+	display: block;
+	position: fixed;
+	top: 140px;
+	left: 10px;
+	width: 175px;
+	height: auto;
+
+	border: 1px solid #9fa0a4;
+	border-radius: 5px;
+	background-color: #fff;
+
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 100%;
+	vertical-align: baseline;
+	color: #241f0c;
+
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+li.tabmenu_on > ul.sub-menu > li.sub-menu-title{
+	line-height: 30px;
+	padding-left: 15px;
+	color: #FFF;
+	font-size: 90%;
+	background: linear-gradient(#505559,#717679),#505559;
+}
+
+li.tabmenu_on > ul.sub-menu > li.sub-menu-title:hover{
+	text-decoration: none;
+}
+
+li.tabmenu_on > ul.sub-menu > li.sub-menu-title > .hideSubMenu{
+	float: right;
+	padding-right: 10px;
+	padding-left: 5px;
+	vertical-align: baseline;
+	border-left: 1px solid white;
+	font-weight: bold;
+}
+
+li.tabmenu_on > ul.sub-menu > li.sub-menu-title > .hideSubMenu:hover{
+	cursor: pointer;
+	background-color: #EAEAEA;
+	color: #555;
+}
+
+li.tabmenu_on > ul.sub-menu > li.tabsubmenu {
+	color: #555;
+	line-height: 30px;
+	border: 1px solid #FFF;
+	border-top-color: #D9DADC;
+	font-size: 90%;
+	padding-left: 15px;
+}
+
+li.tabmenu_on > ul.sub-menu > li.tabsubmenu:hover {
+	background-color: #EAEAEA;
+	color: #555;
+}
+
+li.tabmenu_on > ul.sub-menu > li.tabsubmenu > a{
+	text-decoration: none;
+	color: #555;
+}
+li.tabmenu_on > ul.sub-menu > li.tabsubmenu > a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	color: #555;
+}
+/*---- drop-down menu for tabmenu_off ----*/
+li.tabmenu_off > ul.sub-menu {
+	position:absolute;
+	width: 175px;
+	border: 1px solid #9fa0a4;
+	border-radius: 5px;
+	background-color: #fff;
+
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 100%;
+	vertical-align: baseline;
+	color: #241f0c;
+
+	list-style:none;
+	margin:0;
+	padding-left: 0;
+	z-index: 2;
+}
+
+li.tabmenu_off > ul.sub-menu > li.tabsubmenu {
+	color: #555;
+	line-height: 30px;
+	border: 1px solid #FFF;
+	border-top-color: #D9DADC;
+	font-size: 90%;
+	margin: 0;
+	padding-left: 30px;
+}
+
+li.tabmenu_off > ul.sub-menu > li.tabsubmenu:hover {
+	background-color: #EAEAEA;
+	color: #555;
+}
+
+li.tabmenu_off > ul.sub-menu > li.tabsubmenu > a{
+	text-decoration: none;
+	color: #555;
+}
+li.tabmenu_off > ul.sub-menu > li.tabsubmenu > a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #555;
+}
+
+li.tabmenu_off:hover > ul.sub-menu {
+	display: block;	
+}
+li.tabmenu_off:hover > ul.sub-menu > li.sub-menu-title{
+	display: none;
+}
+
+/* ----------------- button on/off management ----------------- */
+/*Button on/off forcing state style*/
+.on-off-bt {
+  padding : 0px;
+}
+
+.on-off-bt input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.on-off-bt label {
+  display: inline-block;
+  position : relative;
+  width: 35px;
+  line-height : normal;
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6 url('bt.png') 50% 50% repeat-x;
+  font-weight: 400;
+  color: #555;
+  font-size: 0.8em;
+  text-align: center;
+  font-family: Verdana,Arial,sans-serif;
+  text-decoration: none;
+  padding: 4px 5px;
+  min-height: 18px;
+  line-height: 18px;
+
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.5s ease-in-out;
+}
+
+.on-off-bt label:hover {
+    cursor: pointer;
+}
+
+.on-off-bt input:checked + label {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.on-off-bt input.on:checked + label {
+	color: #fff;
+	background: linear-gradient(to bottom, rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%);
+}
+
+.on-off-bt input.off:checked + label {
+	color: #fff;
+    background: linear-gradient(#505559,#717679),#505559;
+}
+
+.on-off-bt label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.on-off-bt label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+/*Button on/off total style*/
+.on-off-bt-total label {
+  display: inline-block;
+  position : relative;
+  width: 90px;
+  line-height : normal;
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6 url('bt.png') 50% 50% repeat-x;
+  font-weight: 400;
+  color: #555;
+  font-size: 0.8em;
+  text-align: center;
+  font-family: Verdana,Arial,sans-serif;
+  text-decoration: none;
+  padding: 4px 5px;
+  min-height: 18px;
+  line-height: 18px;
+
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.5s ease-in-out;
+}
+
+/*Button on/off forced value style*/
+.on-off-bt-forced input.on:checked + label {
+	color: #fff;
+	background: linear-gradient(#505559,#717679),#505559;
+}
+
+#loggedFilesLink{
+	position: relative;
+	border-radius: 4px;
+	border: 1px solid #DDD;
+	color: #555;
+	padding: 6px 5px 6px 5px;
+	min-height: 18px;
+	line-height: 18px;
+	box-shadow: inset 1px 1px 4px #DDD;
+	background: #e6e6e6 url('bt.png') 50% 50% repeat-x;
+	font-weight: 400;
+  	text-decoration: none;
+  	font: 1em "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#loggedFilesLink:hover{
+	color: #fff;
+    background: linear-gradient(#505559,#717679),#505559;
+}
+
+
